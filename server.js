@@ -12,8 +12,10 @@ app.use(cors(),bodyParser.json())
 
 
 //Route
- app.get('/', (req, res) => {    res.send('root route');
-
+ app.get('/', (req, res) => {
+     res.send('root route');
+    console.log("work!");
+    });
 
 // app.get("/myapi/Firas",(req,res) => {
 //     res.send("hi Firas");
