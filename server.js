@@ -10,23 +10,28 @@ const port = process.env.PORT || 4000
 
 app.use(cors(),bodyParser.json())
 
-app.get("/myapi/Firas",(req,res) => {
-    res.send("hi Firas");
-})
 
-app.post("/myapi/Name",(req,res)=>{
-    // let username = req.body.name;
-    res.send("Hi " + req.body.name)
-})
+//Route
+ app.get('/', (req, res) => {    res.send('root route');
 
 
-// if(process.env.NODE_ENV === "production"){
-    app.use(express.static(path.join(__dirname,"client/bulid")))
+// app.get("/myapi/Firas",(req,res) => {
+//     res.send("hi Firas");
+// })
 
-    app.get("*",(req,res)=>{
-        res.sendFile(path.join(__dirname,"client/build","index.html"))
-    })
-// }
+// app.post("/myapi/Name",(req,res)=>{
+//     // let username = req.body.name;
+//     res.send("Hi " + req.body.name)
+// })
+
+
+// // if(process.env.NODE_ENV === "production"){
+//     app.use(express.static(path.join(__dirname,"client/bulid")))
+
+//     app.get("*",(req,res)=>{
+//         res.sendFile(path.join(__dirname,"client/build","index.html"))
+//     })
+// // }
 
 
 
